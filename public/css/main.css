@@ -147,4 +147,14 @@ transition: all 0.3s ease-in-out;
 
 
 
-/*   fuentes  */
+/*   carrito  */
+
+.table-cart{
+  background: #fff;
+  border-radius: 1em;
+  margin-bottom: 30px;
+  padding: 1em;
+}
+.table-cart img{
+  width: 50px;
+}

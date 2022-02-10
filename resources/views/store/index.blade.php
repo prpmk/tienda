@@ -27,7 +27,13 @@
               <p>{{$product -> extract}}</p>
               <div style="vertical-align: center; text-align:center;horizontal-align:center;"><h3><span class="label label-success" >Precio: $ {{ number_format($product -> price,2) }}</span></h3></div>
               <p>
-                <a class="btn btn-warning" href="#"> <i class="fas fa-cart-plus"></i> &nbsp Añadir &nbsp  </a>
+
+                <a class="btn btn-warning" href="{{ route('cart-add', $product -> slug) }}"> 
+                  <i class="fas fa-cart-plus"></i>
+                   &nbsp Añadir &nbsp
+                </a>
+
+
                 <a class="btn btn-primary" href="{{ route('product-detail', $product -> slug)}}"><i class="fas fa-chevron-circle-right"></i> &nbsp  Leer mas  </a>
               </p>
             </div>
