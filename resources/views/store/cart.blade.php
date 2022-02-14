@@ -88,7 +88,7 @@
             Seguir comprando
           </a>
 
-            <a href="#"class="btn btn-primary">
+            <a href="{{ route('order-detalle') }}"class="btn btn-primary">
               Continuar
               <i class="fa fa-chevron-circle-right"></i>
             </a>

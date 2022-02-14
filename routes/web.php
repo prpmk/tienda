@@ -71,3 +71,12 @@ Route::get('cart/update/{product}/{quantity?}', [
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+//ruta del middleware
+Route::get('order-detail', [
+  'middleware' => 'auth',
+  'as' => 'order-detalle',
+  'uses' => 'Cartcontroller@orderDetail'
+]);
