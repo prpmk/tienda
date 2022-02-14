@@ -9,7 +9,8 @@
   @include('store.partials.slider')
 
 </div>
-
+@include ('store.partials.usuario')
+<!---->
 
 <div class="fff" style="vertical-align: middle;">
 <div class="myr-5 pt-5" id="L8"> <!--  agregado por mi para un margen apertura  -->
@@ -28,7 +29,7 @@
               <div style="vertical-align: center; text-align:center;horizontal-align:center;"><h3><span class="label label-success" >Precio: $ {{ number_format($product -> price,2) }}</span></h3></div>
               <p>
 
-                <a class="btn btn-warning" href="{{ route('cart-add', $product -> slug) }}"> 
+                <a class="btn btn-warning" href="{{ route('cart-add', $product -> slug) }}">
                   <i class="fas fa-cart-plus"></i>
                    &nbsp Añadir &nbsp
                 </a>

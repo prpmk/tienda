@@ -41,7 +41,7 @@
 
 <p>
 
-    <div style="vertical-align: center; text-align:center;horizontal-align:center;"><a class="btn btn-primary" href="{{ route('home') }}"><i class="fas fa-chevron-circle-left"></i>Regresar
+    <div style="vertical-align: center; text-align:center;horizontal-align:center;"><a class="btn btn-primary" href="{{ route('homen') }}"><i class="fas fa-chevron-circle-left"></i>Regresar
   </a></div>
 </p>
 </div>

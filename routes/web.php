@@ -27,7 +27,7 @@ Route::bind('product', function ($slug) {
 
 
 Route::get('/',[
-  'as' => 'home',
+  'as' => 'homen',
   'uses' =>'StoreController@index'
   ]);
 Route::get('product/{slug}',[
@@ -67,3 +67,7 @@ Route::get('cart/update/{product}/{quantity?}', [
   'as' => 'cart-update',
   'uses' => 'Cartcontroller@update'
 ]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

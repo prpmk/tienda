@@ -83,7 +83,7 @@
       <!-- botones complementarios -->
       <hr>
         <p style="text-align:center;">
-          <a href="{{ route('home') }}"class="btn btn-primary">
+          <a href="{{ route('homen') }}"class="btn btn-primary">
             <i class="fa fa-chevron-circle-left"></i>
             Seguir comprando
           </a>
