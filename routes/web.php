@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//use App\Category;
+//use App\Http\Controllers\Admon\CategoryController;
+//use Illuminate\Support\Facades\Route;
 
 //Route::get('/', function () {
 //    return view('welcome');
@@ -24,6 +27,10 @@ Route::bind('product', function ($slug) {
 //Route::bind('user', function ($value) {
   //      return App\User::where('name', $value)->first() ?? abort(404);
     //});
+//insercion de dependencia category
+Route::bind('category', function($category){
+  return App\Category::find($category);
+});
 
 
 Route::get('/',[
@@ -80,3 +87,84 @@ Route::get('order-detail', [
   'as' => 'order-detalle',
   'uses' => 'Cartcontroller@orderDetail'
 ]);
+
+
+
+
+// PAYPAL
+
+//enviamos pedido a paypal
+Route::get('payment', array(
+  'as' => 'payment',
+  'uses' => 'PaypalController@postPayment',
+));
+//Paypal redirecciona a esta ruta
+Route::get('payment/status', array(
+  'as' => 'payment.status',
+  'uses' => 'PaypalController@getPaymentStatus',
+));
+
+
+
+//admin----
+
+//Route::resource('admin/category', 'Admin\CategoryController');
+//Route::resource('admin/category/create', 'Admin\CategoryController@create');
+//Route::resource('/admin', 'CategoryController@create');
+//Route::resource('/admin', 'CategoryController@store');
+//Route::resource('admin/categori', 'Admin\CategoriController');
+//Route::resource('/admin/category',[CategoryController::class, 'create']);
+
+Route::resource('category', 'CategoryController');
+//Route::get('category', 'CategoryController@index');
+
+
+//si funcionan almenos para llamar
+//Route::get('admin/index', [ 'uses' => 'CategoryController@index', 'as' => 'index' ]); //Route::resource('users','CategoryController');
+//Route::get('admin/create', array( 'uses' => 'CategoryController@create', 'as' => 'creacion' )); //Route::resource('users','CategoryController');
+//Route::post('admin/store', [ 'uses' => 'CategoryController@store', 'as' => 'store' ]);
+//Route::resource('admin/category','Admin\CategoryController');
+
+//Route::any('admin/category/create', 'Admin\CategoryController@create');
+//Route::post('admin/category/create', 'Admin\CategoryController@store');
+//Route::group(['namespace' => 'Admin'], function()
+//{
+    //rutas dentro de admin
+//    Route::get('admin/category', 'CategoryController@index');
+//    Route::get('admin/category/create', 'CategoryController@create');
+//    Route::post('admin/category', 'CategoryController@store');
+    //Route::get('admin/category', 'CategoryController@show');
+    //Route::get('admin/category', 'CategoryController@edit');
+    //Route::get('admin/category', 'CategoryController@update');
+//});
+
+
+
+
+
+//Route::get('users/{id_usuario}/destroy', [ 'uses' => 'UsersController@destroy', 'as' => 'admin.users.destroy' ]); Route::resource('users','Userscontroller');
+
+//Route::resource('admon/category', 'Admon\CategoriController');
+//Route::resource('Admon/category', 'Admon\CategoriController');
+//Route::get('Admon/category/create',function(){
+//  return view('admon.category.create');
+//});
+//Route::resource();
+//Route::resource('Admin/category', 'admin\CategoryController');
+
+
+
+//home del admin
+//Route::get('admin/home', function(){
+//  return view('admin.home');
+//});
+Route::get('admin/homes',function(){
+  return view('admin.homes');
+});
+
+
+
+//prueba
+Route::get('formulario', function(){
+  return view('prueba.form');
+});

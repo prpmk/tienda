@@ -56,13 +56,14 @@
           </span>
         </h3>
         <hr>
-        <a href="{{ route('cart-show') }}" class="btn btn-primary">
-          <i class="fa fa-chevron-circle-left"></i>
-          Regresar
-        </a>
-        <a href="#" class="btn btn-primary">
-          Pagar con: <i class="fa fa-paypal fa-2x"></i>
-        </a>
+        <div class="row w-100 justify-content-center align-items-center">
+          <a href="{{ route('cart-show') }}" class="btn btn-primary fa-2x">
+            <i class="fa fa-chevron-circle-left"></i>
+            Regresar
+          </a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <a href="{{ route('payment') }}" class="btn btn-primary fa-brands fa-cc-paypal fa-2x">
+            Pagar con  paypal
+          </a>
 
       </div>
     </div>
