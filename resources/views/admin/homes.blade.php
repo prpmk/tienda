@@ -34,7 +34,7 @@
           <div class="col-md-6">
             <div class="panel">
               <i class="fab fa-cc-paypal icon-home"></i>
-              <a href="#" class="btn btn-warning btn-block btn-home-admin">
+              <a href="{{ route('user.index')}}" class="btn btn-warning btn-block btn-home-admin">
                 PEDIDOS
               </a>
             </div>
@@ -43,7 +43,7 @@
           <div class="col-md-6">
             <div class="panel">
               <i class="fa fa-users icon-home"></i>
-              <a href="#" class="btn btn-warning btn-block btn-home-admin">
+              <a href="{{ route('') }}" class="btn btn-warning btn-block btn-home-admin">
                 USUARIOS
               </a>
             </div>
