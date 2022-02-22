@@ -117,7 +117,9 @@ Route::get('payment/status', array(
 
 Route::resource('category', 'CategoryController');
 //Route::get('category', 'CategoryController@index');
-
+Route::resource('product', 'ProductController');
+Route::get('/product/{slug}', ['uses' => 'ProductController@create','as' => 'product.create']);
+//Route::get('/product/{product}/update', ['uses' => 'ProductController@update','as' => 'product.update']);
 
 //si funcionan almenos para llamar
 //Route::get('admin/index', [ 'uses' => 'CategoryController@index', 'as' => 'index' ]); //Route::resource('users','CategoryController');
@@ -161,6 +163,11 @@ Route::resource('category', 'CategoryController');
 Route::get('admin/homes',function(){
   return view('admin.homes');
 });
+
+
+//products
+//Route::resource('product', 'ProductController');
+
 
 
 
