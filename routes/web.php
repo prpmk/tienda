@@ -33,6 +33,12 @@ Route::bind('category', function($category){
 });
 
 
+//insercion de dependencia user
+Route::bind('user', function($user){
+return App\User::find($user);
+});
+
+
 Route::get('/',[
   'as' => 'homen',
   'uses' =>'StoreController@index'
@@ -120,7 +126,7 @@ Route::resource('category', 'CategoryController');
 Route::resource('product', 'ProductController');
 Route::get('/product/{slug}', ['uses' => 'ProductController@create','as' => 'product.create']);
 //Route::get('/product/{product}/update', ['uses' => 'ProductController@update','as' => 'product.update']);
-
+Route::resource('user', 'UserController');
 //si funcionan almenos para llamar
 //Route::get('admin/index', [ 'uses' => 'CategoryController@index', 'as' => 'index' ]); //Route::resource('users','CategoryController');
 //Route::get('admin/create', array( 'uses' => 'CategoryController@create', 'as' => 'creacion' )); //Route::resource('users','CategoryController');
