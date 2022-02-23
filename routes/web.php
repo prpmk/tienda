@@ -124,13 +124,21 @@ Route::get('payment/status', array(
 Route::resource('category', 'CategoryController');
 //Route::get('category', 'CategoryController@index');
 Route::resource('product', 'ProductController');
-Route::get('/product/{slug}', ['uses' => 'ProductController@create','as' => 'product.create']);
+//Route::get('/product/{slug}', ['uses' => 'ProductController@create','as' => 'product.create']);
 //Route::get('/product/{product}/update', ['uses' => 'ProductController@update','as' => 'product.update']);
 Route::resource('user', 'UserController');
 Route::get('orders', array(
 'as'=>'order.index',
 'uses'=>'OrderController@index',
 ));
+Route::post('admin/order/get-items', [
+  'as'=> 'admin.order.getItems',
+  'uses'=> 'OrderController@getItems'
+]);
+Route::get('order/{id}', [
+  'as'=>'orders.destroy',
+  'uses'=> 'OrderController@destroy'
+]);
 //si funcionan almenos para llamar
 //Route::get('admin/index', [ 'uses' => 'CategoryController@index', 'as' => 'index' ]); //Route::resource('users','CategoryController');
 //Route::get('admin/create', array( 'uses' => 'CategoryController@create', 'as' => 'creacion' )); //Route::resource('users','CategoryController');

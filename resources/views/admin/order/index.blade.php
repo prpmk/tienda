@@ -45,9 +45,19 @@
 
             @foreach($orders as $order)
               <tr>
-                <td> <a href="#" class="btn btn-primary btn-detalle-pedido" data-id="{{ $order->id }}" data-path="{{ route(admin.order.getItems) }}" data-toggle="modal" data-target="#myModal" data-token="{{ csrf_token() }}"> <i class="fa fa-external-link"></i> </a> </td>
                 <td>
-                  {!! Form::open(['route'=>['order.destroy', $order->id]]) !!}
+                  <a href="#"
+                  class="btn btn-primary btn-detalle-pedido"
+                  data-id="{{ $order->id }}"
+                   data-path="{{ route('admin.order.getItems') }}"
+                   data-toggle="modal"
+                   data-target="#myModal"
+                   data-token="{{ csrf_token() }}">
+                   <i class="fa fa-external-link"></i>
+                 </a>
+               </td>
+                <td>
+                  {!! Form::open(['route'=>['orders.destroy', $order->id]]) !!}
                   <input type="hidden" name="_method" value="DELETE">
                   <button onClick="return confirm('Eliminar registro?')" class="btn btn-danger">
                     <i class="fa fa-trash"></i>

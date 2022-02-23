@@ -23,7 +23,7 @@
         @foreach($products as $product)
           <div class="product white-panel">
             <h3>{{$product -> name}}</h3><hr>
-            <img src="{{$product -> image}}" width='250'>
+            <img src="{{$product -> image}}" width='250' style="height:200px;">
             <div class="product-info panel">
               <p>{{$product -> extract}}</p>
               <div style="vertical-align: center; text-align:center;horizontal-align:center;"><h3><span class="label label-success" >Precio: $ {{ number_format($product -> price,2) }}</span></h3></div>

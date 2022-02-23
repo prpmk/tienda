@@ -31,6 +31,9 @@
                 Apellidos
               </th>
               <th style="text-align:center">
+                Usuario
+              </th>
+              <th style="text-align:center">
                 Correo
               </th>
               <th style="text-align:center">

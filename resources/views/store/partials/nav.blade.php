@@ -23,7 +23,7 @@
             <div class="dropdown-menu">
               <!-- muestra para logeados -->
               @auth
-              
+
                 <p>bien</p>
                 <a class="dropdown-item" href="#" onclick="event.preventDefault();
                    document.getElementById('logout-form').submit();">

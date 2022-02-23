@@ -47,7 +47,7 @@ class Cartcontroller extends Controller
       return redirect() -> route('cart-show');
     }
 
-    //baciar carrito
+    //Vaciar carrito
     public function trash(){
       \Session::forget('cart');
       return redirect() -> route('cart-show');

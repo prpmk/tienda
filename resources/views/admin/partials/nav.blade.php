@@ -8,16 +8,16 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor03">
-      <span class="navbar-text">
+      <a href="{{ url('admin/homes') }}"><span class="navbar-text">
       <i class="fa fa-dashboard"></i>&nbsp Dashboard
-      </span>
+      </span></a>
         <!--    -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-          <li><a href='#'>Categorias</a></li>
-          <li><a href='#'>Productos</a></li>
-          <li><a href='#'>Pedidos</a></li>
-          <li><a href='#'>Usuarios</a></li>
+          <li><a href="{{ route('category.index') }}">Categorias</a></li>
+          <li><a href="{{ route('product.index') }}">Productos</a></li>
+          <li><a href="{{ route('order.index') }}">Pedidos</a></li>
+          <li><a href="{{ route('user.index') }}">Usuarios</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i>&nbsp {{ Auth::user()->user }}</a>
             <div class="dropdown-menu text-center">
