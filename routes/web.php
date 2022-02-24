@@ -135,8 +135,12 @@ Route::post('admin/order/get-items', [
   'as'=> 'admin.order.getItems',
   'uses'=> 'OrderController@getItems'
 ]);
+//Route::get('order/{id}', array(
+//'as'=>'admin.order.destroy',
+//'uses'=>'OrderController@destroy',
+//));
 Route::get('order/{id}', [
-  'as'=>'orders.destroy',
+  'as'=>'admin.order.destroy',
   'uses'=> 'OrderController@destroy'
 ]);
 //si funcionan almenos para llamar

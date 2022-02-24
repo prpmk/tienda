@@ -21,9 +21,9 @@
               <th style="text-align:center">
                 Ver detalle
               </th>
-              <th style="text-align:center">
+    <!--      <th style="text-align:center">
                 Eliminar
-              </th style="text-align:center">
+              </th>                 -->
               <th style="text-align:center">
                 Fecha
               </th style="text-align:center">
@@ -52,18 +52,19 @@
                    data-path="{{ route('admin.order.getItems') }}"
                    data-toggle="modal"
                    data-target="#myModal"
-                   data-token="{{ csrf_token() }}">
+                   data-token="{{ csrf_token() }}"
+                   >
                    <i class="fa fa-external-link"></i>
                  </a>
                </td>
-                <td>
-                  {!! Form::open(['route'=>['orders.destroy', $order->id]]) !!}
+      <!--     <td>
+                  {!! Form::open(['route'=>['admin.order.destroy', $order->id]]) !!}
                   <input type="hidden" name="_method" value="DELETE">
                   <button onClick="return confirm('Eliminar registro?')" class="btn btn-danger">
                     <i class="fa fa-trash"></i>
                   </button>
                   {!! Form::close() !!}
-                </td>
+                </td>                -->
                 <td>{{ $order->created_at }}</td>
                 <td>{{ $order->user->name . " " . $order->user->last_name }}</td>
                 <td>{{ number_format($order->subtotal,2) }}</td>

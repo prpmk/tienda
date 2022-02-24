@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Eloquent;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\Http\Requests\SaveProductRequest;
@@ -22,10 +23,11 @@ class OrderController extends Controller
       return json_encode($items);
     }
     public function destroy($id){
-      $order = Order::findrFail($id);
-      $deleted = $order->delete();
+      $order = Order::findOrFail($id);
+      //dd($order);
+      $delete = $order->delete();
       //dd($deleted);
-      $message = $deleted ? 'Producto eliminado exitosamente!' : 'El producto no pudo ser eliminado!';
+      $message = $delete ? 'Producto eliminado exitosamente!' : 'El producto no pudo ser eliminado!';
       return redirect()->route('orders.index')->with('message',$message);
 
       //$deleted = $product->delete();
