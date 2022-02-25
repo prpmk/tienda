@@ -1,6 +1,6 @@
 /*  cuerpo  */
 body{
-  background: orange;
+  background-image: linear-gradient( #ffffff,#6ed3f5, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #e16ac4,#ffffff );
 }
 /* ----checar al final estilos de fuentes
 h1,h2,h3,h4,h5{font-family: 'Open Sans', sans-serif;
@@ -20,6 +20,13 @@ h3{
   margin-top: 5rem !important;
 
 }
+.navis{
+  background-color: transparent !important;
+}
+
+.navis2{
+  background-image: linear-gradient( #ffffff, #6ed3f5 ) !important;
+}
 /*
 .main title{
   color: orange !important;
@@ -28,9 +35,17 @@ h3{
 
 */
 
+/* colores a usar
+#6ed3f5 -----azul
+#e16ac4 -----rosa
+#010101 -----negro
+#ffffff -----blanco*/
+
 /*   footer   */
 .hola{
-    background-color: #222;
+    background-color: #e16ac4;
+    background-image: linear-gradient( #f4cceb, #e16ac4  );
+    border: 1px solid black;
 }
 footer{
   text-align: center;
@@ -49,7 +64,7 @@ ul.redes li a{
 
 /*   avatar   */
 .avatar{
-  border: 5px solid orange;
+  border: 5px solid white;
   border-radius: 50%;
   height: 100px;
   width: 100px;

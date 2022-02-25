@@ -191,8 +191,14 @@ Route::get('admin/homes',function(){
 //Route::resource('product', 'ProductController');
 
 
-
-
+//conocenos
+Route::get('saludo', function(){
+    return view('saludo');
+});
+//contacto
+Route::get('contacto', function(){
+    return view('contacto');
+});
 //prueba
 Route::get('formulario', function(){
   return view('prueba.form');

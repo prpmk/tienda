@@ -1,5 +1,12 @@
-<p>
-      <!-- verificar, es para ver el nombre del usuario -->
+@auth
+
+  <h1 style="align-self: center; text-align: center; align-items: center;">Bienvenido </h1>
+  <h2 style="align-self: center; text-align: center; align-items: center;"> {{auth()->user()->name}}</h2>
+  <h4 style="align-self: center; text-align: center; align-items: center;">Apreciamos tu preferencia</h4>
+@endauth
+
+<!--<p>
+       verificar, es para ver el nombre del usuario
       {{ auth()->user() }}</p>
       @auth
       <p>hola wey</p>
@@ -27,5 +34,8 @@
 
       @endauth
       <p>
-            <!-- verificar, es para ver el nombre del usuario -->
+             verificar, es para ver el nombre del usuario
             {{ session('status') }}</p>
+
+
+          -->

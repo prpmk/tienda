@@ -1,8 +1,8 @@
 
 
-<div class="container ff" style="width: 100%; margin-left: 0; margin-right: 0; margin-botton: 0;" >
-  <!--<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="4000" style="margin-top:70px; margin-left: 0; margin-right: 0; width: 91.5em;">-->
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="4000" style="margin-bottom: 0; margin-left: 0; margin-right: 0; width: 91.5em;">
+<div class="container" style="width: 100%; margin-left: 0; margin-right: 0; margin-botton: 0; vertical-align: middle; horizontal-align: middle;" >
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="4000" style="margin-top:70px; margin-left: 0; margin-right: 0; width: 91.5em; vertical-align: middle; horizontal-align: middle;">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="4000" style="margin-bottom: 0; margin-left: 0; margin-right: 0; width: 91.5em; vertical-align: middle; horizontal-align: middle;">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>

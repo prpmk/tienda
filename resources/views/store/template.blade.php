@@ -43,5 +43,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="{{ asset('js/pinterest_grid.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+
+
   </body>
 </html>

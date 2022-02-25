@@ -5,10 +5,10 @@
 @section('content')
 
 <!-- incluye el slider -->
-<div class="ff">
+<div style="vertical-align: middle; horizontal-align: middle; text-align: middle; margin-left: middle;">
   @include('store.partials.slider')
-
 </div>
+
 @include ('store.partials.usuario')
 <!---->
 
